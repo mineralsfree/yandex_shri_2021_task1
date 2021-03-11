@@ -1,0 +1,34 @@
+@import "src/_colors";
+.title{
+    &-container{
+        margin-top: 20px;
+        //margin-bottom: 48px;
+        @media only screen and (orientation: portrait) {
+            //margin-bottom: 117px;
+            max-height: 64px;
+            text-align: start;
+            margin-left: 24px;
+            @media only screen and (max-width: 415px) {
+                max-width: 300px;
+            }
+        }
+    }
+    &-title{
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 32px;
+    }
+    &-subtitle{
+        font-weight: 500;
+        margin-top: 8px;
+        line-height: 18px;
+        font-size: 16px;
+        color: $grey
+    }
+}
+.theme_light .title-subtitle{
+    color: $light_gray
+}
+svg:hover{
+    fill: red;
+}

@@ -1,0 +1,38 @@
+.donat {
+  &-container {
+    position: relative;
+  }
+
+  &-text {
+    width: 120px;
+  }
+
+  &-text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.differenceText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: #918F8A;
+}
+
+.totalText {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+  margin-bottom: 6px;
+  @media only screen and (orientation: portrait) {
+    margin-bottom: 8px;
+
+  }
+}

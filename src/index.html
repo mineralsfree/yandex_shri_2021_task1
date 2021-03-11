@@ -1,0 +1,47 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Task 1 SHRI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+</head>
+<body>
+<script src="stories.js"></script>
+<script>
+  const body = document.querySelector('body');
+  body.innerHTML = window.renderTemplate('chart',  {
+      "title": "Строки кода",
+      "subtitle": "Спринт № 213",
+      "values": [
+        {"title": "203", "value": 47798},
+        {"title": "204", "value": 68590},
+        {"title": "205", "value": 55472},
+        {"title": "206", "value": 63073},
+        {"title": "207", "value": 51917},
+        {"title": "208", "value": 65852},
+        {"title": "209", "value": 60693},
+        {"title": "210", "value": 70631},
+        {"title": "211", "value": 57299},
+        {"title": "212", "value": 62839},
+        {"title": "213", "value": 74156, "active": true},
+        {"title": "214", "value": 0},
+        {"title": "215", "value": 0},
+        {"title": "216", "value": 0},
+        {"title": "217", "value": 0},
+        {"title": "218", "value": 0}
+      ],
+      "users": [
+        {"id": 12, "name": "Алексей Ярошевич", "avatar": "12.jpg", "valueText": "8739"},
+        {"id": 8, "name": "Александр Иванков", "avatar": "8.jpg", "valueText": "7538"},
+        {"id": 10, "name": "Яна Берникова", "avatar": "10.jpg", "valueText": "6845"}
+      ]
+    }
+  );
+
+  window.switchTheme = () => {
+    body.className = (body.className === 'theme_light') ? 'theme_dark' : 'theme_light';
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+@import "../../../_colors";
+
+.theme_light .profile-image {
+  filter: none;
+}
+
+.profile {
+  &-container {
+    max-width: 96px;
+    text-align: center;
+    &_horizontal{
+      display: flex;
+    }
+  }
+
+  &-emoji {
+    top: -5px;
+    font-size: 32px;
+    line-height: 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  &-image {
+    margin-right: 1px;
+    filter: grayscale(100%);
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+  }
+
+  &-name {
+    margin-top: 6px;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  .theme_light &-bottom_text_colored {
+    color: $black;
+  }
+
+  &-bottom_text {
+    &_colored {
+      color: $white
+    }
+    margin-top: 4px;
+    color: $light_gray;
+    width: 96px;
+    font-family: Roboto, serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+  }
+}

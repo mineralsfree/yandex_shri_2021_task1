@@ -1,0 +1,48 @@
+@import '../../../colors';
+
+.chart-profile {
+  &-container {
+    width: 220px;
+    display: flex;
+    align-items: center;
+  }
+
+  .theme_light &-image {
+    filter: none;
+  }
+
+  &-image {
+    margin-right: 1px;
+    filter: grayscale(100%);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+  }
+
+  &-text-container {
+    margin-left: 13px;
+    display: flex;
+    flex-direction: column;
+    height: 38px;
+    justify-content: space-between;
+  }
+
+  &-name {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  &-bottom_text {
+    .theme_light & {
+      color: $light_gray;
+    }
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: $grey;
+    text-align: start;
+
+  }
+}
+

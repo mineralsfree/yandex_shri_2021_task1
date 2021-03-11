@@ -1,0 +1,81 @@
+@import "../../colors";
+
+.diagram {
+  &-valueText{
+     margin-left: 16px;
+  }
+  &-title{
+    margin-left: 10px;
+  }
+  &-container{
+    margin: 24px;
+  }
+  &-horizontal {
+    display: flex;
+    justify-content: center;
+    @media only screen and (orientation: portrait) {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+  }
+
+  &-vertical {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    @media only screen and (orientation: landscape) {
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+
+  }
+  &-line{
+    width: 100%;
+    background: #918F8A;
+    opacity: 0.3;
+    margin-bottom: 16px;
+    height: 2px;
+  }
+  &-table{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  &-value-container{
+    display: flex;
+  }
+  &-info{
+    margin-top: 32px;
+  }
+  &-circle {
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    &-container{
+      display: flex;
+    }
+    &_0 {
+      box-shadow: $orange_shadow;
+      background: $orange_background;
+    }
+
+    &_1 {
+      box-shadow: $yellow_shadow;
+      background: $yellow_background;
+    }
+
+    &_2 {
+      background: $gray_background;
+      box-shadow: $gray_shadow;
+    }
+
+    &_3 {
+      box-shadow: $dark_gray_shadow;
+      background: $dark_gray_background;
+    }
+
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+  }
+}

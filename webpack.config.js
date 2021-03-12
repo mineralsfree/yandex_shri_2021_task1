@@ -7,7 +7,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpe?g|svg)$/i,
         use: [
           {
             options: {
@@ -31,6 +31,9 @@ module.exports = {
         type: 'asset/resource',
       }
     ]
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'src/assets/images'),
   },
   output: {
     path: path.resolve(__dirname, "build"),

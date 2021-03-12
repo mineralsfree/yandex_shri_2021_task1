@@ -6,7 +6,7 @@ import {App} from './App'
 import {data} from './data'
 
 function renderTemplate(kek, lol) {
-  const item = data[8];
+  const item = data[9];
   return ReactDOMServer.renderToStaticMarkup(<App alias={item.alias} data={item.data}/>)
 }
 

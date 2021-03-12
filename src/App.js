@@ -4,6 +4,7 @@ import {Chart} from "./components/Chart/Chart";
 import {Vote} from "./components/Vote/Vote";
 import {Diagram} from "./components/Diagram/Diagram";
 import {Global} from "recharts";
+import {Activity} from "./components/Activity/Activity";
 
 const storiesMap = {
   leaders: <Leaders/>,

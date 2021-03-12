@@ -4,7 +4,7 @@ import {importAll} from '../../../helpers/imageImport'
 import './ChartProfile.scss'
 
 const ChartProfileCN = cn('chart-profile')
-const images = importAll();
+const images = importAll('4x');
 export const ChartProfile = props => {
   const {name = '', avatar, id, valueText,} = props.user;
   return (<div className={ChartProfileCN('container',)}>

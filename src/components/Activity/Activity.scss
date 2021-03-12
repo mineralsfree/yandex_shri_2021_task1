@@ -1,102 +1,20 @@
 @import '../../colors';
 
-$x1: 43.73/4;
-:root {
-  --columns: 7;
-  --rows: 24;
-  @media screen and (orientation: landscape){
-    --columns: 12;
-    --rows: 7;
-  }
-}
 
 .activity {
   &-container {
     display: flex;
     flex-direction: column;
   }
-
-  &-table {
-    &-image {
-      &_min {
-        content: url("../../assets/images/4x/min-dark.png");
-      }
-
-      &_mid {
-
-        content: url("../../assets/images/4x/mid-dark.png");
-      }
-
-      &_max {
-        content: url("../../assets/images/4x/max-dark.png");
-      }
-
-      &_extra {
-        content: url("../../assets/images/4x/extra-dark.png");
-      }
-
-      .theme_light &_min {
-        content: url("../../assets/images/4x/min-light.png");
-      }
-
-      .theme_light &_mid {
-        content: url("../../assets/images/4x/mid-light.png");
-      }
-
-      .theme_light &_max {
-        content: url("../../assets/images/4x/max-light.png");
-      }
-
-      .theme_light &_extra {
-        content: url("../../assets/images/4x/extra-light.png");
-      }
+  &-table-container{
+    @media screen and (orientation: landscape){
+      margin-top: 58px;
     }
-
-    margin-left: -22px;
-
-    &-container {
       margin-top: 50px;
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    display: grid;
-    grid-template-columns: repeat(var(--columns), $x1*4 + px);
-    grid-template-rows: repeat(var(--rows), 16.736+ px);
-    grid-gap: 0px 0px;
-
-    &-item {
-      &_size {
-        &_mid {
-          margin-top: -9px;
-        }
-
-        &_max {
-          margin-top: -29px;
-        }
-
-        &_extra {
-          margin-top: -50px;
-        }
-
-      }
-
-      img {
-        width: $x1*4 + px;
-        //border: 1px solid white;
-      }
-
-      &_odd {
-        margin-left: $x1*2 + px;
-      }
-    }
-
-    &-row {
-      display: flex;
-    }
   }
-
   &-scale-bar {
     &-item {
       margin-left: 8px;

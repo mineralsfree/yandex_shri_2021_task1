@@ -37,7 +37,9 @@ $ls: 34/4;
       }
       width: $ps*4 + px;
       &_min {
-        height: 32px;
+        @media screen and (orientation: landscape) {
+          height: 32px;
+        }
         content: url("../../../assets/images/4x/min-dark.png");
       }
 

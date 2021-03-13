@@ -22,14 +22,21 @@
 
     display: flex;
     margin-top: 76px;
+    @media screen and (orientation: landscape) {
+      margin-top: 53px;
 
-    &-text {
+    }
+
+      &-text {
       margin-top: 8px;
       font-weight: 500;
       font-size: 16px;
       line-height: 18px;
       color: $grey;
       text-align: left;
+      @media screen and (orientation: landscape)  {
+        text-align: center;
+      }
 
       .theme_light & {
         color: $light_gray;
@@ -37,7 +44,7 @@
     }
 
     &-bar {
-      width: 59.2px;
+      width: 59px;
       height: 12px;
       border-radius: 2px;
 

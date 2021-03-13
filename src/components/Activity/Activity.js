@@ -10,7 +10,8 @@ import {TableLandscape} from "./Table/TableLandscape";
 export const ActivityCN = cn('activity');
 export const Activity = props => {
   const {data: {title, subtitle, data}} = props;
-  const [rangeLength] = getRange(data);
+  console.log(data);
+  const [rangeLength, max] = getRange(data);
   return (<div className={ActivityCN('container')}>
     <Title text={title} subtitle={subtitle}/>
     <div className={ActivityCN('table-container')}>
@@ -19,7 +20,9 @@ export const Activity = props => {
       <div className={ActivityCN('scale-bar')}>
         <div>
           <Scale/>
-          <div className={ActivityCN('scale-bar-text')}>1 час</div>
+          <div className={ActivityCN('scale-bar-text', {horizontal: true})}>2 часa</div>
+          <div className={ActivityCN('scale-bar-text', {vertical: true})}>1 час</div>
+
         </div>
         <div className={ActivityCN('scale-bar-item')}>
           <div className={ActivityCN('scale-bar-bar', {'black' : true})}/>
@@ -36,7 +39,7 @@ export const Activity = props => {
         </div>
         <div className={ActivityCN('scale-bar-item')}>
           <div className={ActivityCN('scale-bar-bar', {'gold' : true})}/>
-          <div className={ActivityCN('scale-bar-text')}>{1+rangeLength*2} — {rangeLength*3}</div>
+          <div className={ActivityCN('scale-bar-text')}>{1+rangeLength*2} — {max}</div>
         </div>
 
 

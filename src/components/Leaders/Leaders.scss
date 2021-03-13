@@ -1,13 +1,16 @@
 @import '../../_colors';
+
 .leaderboard {
-  &-profile{
+  &-profile {
     margin-bottom: 16px;
   }
-  &-main-container{
+
+  &-main-container {
     height: 100%;
     display: flex;
     flex-direction: column;
   }
+
   &-title {
     margin-top: 20px;
     margin-bottom: 48px;
@@ -48,6 +51,7 @@
     &_5 {
       margin-top: 40px;
     }
+
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -56,7 +60,7 @@
 
   &-container {
     justify-content: center;
-    @media only screen  and (orientation: portrait)  {
+    @media only screen and (orientation: portrait) {
       .leaderboard-item_container:first-child {
         display: none;
       }
@@ -66,9 +70,19 @@
     }
     display: flex;
     align-items: stretch;
-    height: 100%;
+    position: absolute;
+    bottom: 0;
+    margin: auto auto;
+    right: 50%;
+    left: 50%;
+    height: 250px;
+    @media only screen and (orientation: portrait) {
+      height: 467px;
+
+    }
   }
-  &-voted{
+
+  &-voted {
     visibility: hidden;
     @media only screen and (orientation: portrait) {
       visibility: visible;
@@ -78,18 +92,20 @@
       flex-direction: column;
       align-items: center;
     }
-      position: absolute;
+    position: absolute;
 
-    &-line{
+    &-line {
       height: 1px;
       width: 60px;
       margin-top: 9px;
       background: $grey;
     }
-    .theme_light &-line{
+
+    .theme_light &-line {
       background: $black;
     }
-    &-number{
+
+    &-number {
       font-size: 30px;
       line-height: 32px;
       margin: 6px 0 16px 0;

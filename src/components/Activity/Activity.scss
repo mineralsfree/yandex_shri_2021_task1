@@ -6,15 +6,17 @@
     display: flex;
     flex-direction: column;
   }
-  &-table-container{
-    @media screen and (orientation: landscape){
+
+  &-table-container {
+    @media screen and (orientation: landscape) {
       margin-top: 58px;
     }
-      margin-top: 50px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
   &-scale-bar {
     &-item {
       margin-left: 8px;
@@ -27,14 +29,26 @@
 
     }
 
-      &-text {
+    &-text {
       margin-top: 8px;
       font-weight: 500;
       font-size: 16px;
       line-height: 18px;
       color: $grey;
       text-align: left;
-      @media screen and (orientation: landscape)  {
+      display: block;
+      &_vertical {
+        @media screen and (orientation: landscape) {
+          display: none;
+        }
+      }
+      &_horizontal {
+        @media screen and (orientation: portrait) {
+          display: none;
+        }
+      }
+
+      @media screen and (orientation: landscape) {
         text-align: center;
       }
 
@@ -45,6 +59,9 @@
 
     &-bar {
       width: 59px;
+      @media screen and (orientation: landscape) {
+        width: 60px;
+      }
       height: 12px;
       border-radius: 2px;
 

@@ -12,9 +12,7 @@ export const Leaders = props => {
   const {data} = props;
   let voted;
   let users = [...data.users];
-  //users.sort((a, b) => Number(b.valueText) - Number(a.valueText))
   users = users.splice(0, 5);
-  console.log(users);
   if (data.selectedUserId && users[0].id !== data.selectedUserId) {
     if (!users.find(a => a.id === data.selectedUserId)) {
       users[4] = data.users.find(a => a.id === data.selectedUserId);

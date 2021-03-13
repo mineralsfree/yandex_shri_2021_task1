@@ -5,6 +5,7 @@ export const data = [
       "title": "Больше всего коммитов",
       "subtitle": "Спринт № 213",
       "emoji": "👑",
+      // "selectedUserId": 8,
       "users": [
         {"id": 3, "name": "Дарья Ковалева", "avatar": "3.jpg", "valueText": "32"},
         {"id": 9, "name": "Сергей Бережной", "avatar": "9.jpg", "valueText": "27"},

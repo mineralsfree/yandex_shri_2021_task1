@@ -35,23 +35,4 @@
         "valueText": "792"
       }]
     }
-  );
-
-  window.switchTheme = () => {
-    body.className = (body.className === 'theme_light') ? 'theme_dark' : 'theme_light';
-  }
-  function onDocumentClick(e) {
-    if (e.target instanceof HTMLElement) {
-      let target = e.target;
-      console.log(target);
-
-      while (target.parentElement && !target.dataset.action && target !== document.body) {
-        target = target.parentElement;
-        console.log(target);
-      }
-      console.log(target);
-      console.log(e)
-      const {action, params} = target.dataset;
-    }
-  }
-  document.body.addEventListener('click', onDocumentClick, true);</script></body></html>
+  );</script></body></html>

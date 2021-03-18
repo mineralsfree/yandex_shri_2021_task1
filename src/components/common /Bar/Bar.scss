@@ -33,12 +33,12 @@
     min-width: 150px;
   }
   min-width: 120px;
-  padding-top: 18px;
   font-size: 30px;
   border-radius: 6px 6px 0 0;
   font-weight: bold;
 
   &-number {
+    margin-top: 18px;
     line-height: 32px;
   }
 }

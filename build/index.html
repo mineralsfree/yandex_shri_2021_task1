@@ -1,15 +1,4 @@
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Task 1 SHRI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-
-</head>
-<body>
-<script src="stories.js"></script>
-<script>
-  const body = document.querySelector('body');
+<html lang="en"><head><meta charset="UTF-8"><title>Task 1 SHRI</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/><script defer="defer" src="stories.js"></script></head><body><script src="stories.js"></script><script>const body = document.querySelector('body');
   body.innerHTML = window.renderTemplate('vote',   {
       "title": "Самый 🔎 внимательный разработчик",
       "subtitle": "Спринт Тополиный пух",
@@ -48,6 +37,21 @@
     }
   );
 
-</script>
-</body>
-</html>
+  window.switchTheme = () => {
+    body.className = (body.className === 'theme_light') ? 'theme_dark' : 'theme_light';
+  }
+  function onDocumentClick(e) {
+    if (e.target instanceof HTMLElement) {
+      let target = e.target;
+      console.log(target);
+
+      while (target.parentElement && !target.dataset.action && target !== document.body) {
+        target = target.parentElement;
+        console.log(target);
+      }
+      console.log(target);
+      console.log(e)
+      const {action, params} = target.dataset;
+    }
+  }
+  document.body.addEventListener('click', onDocumentClick, true);</script></body></html>

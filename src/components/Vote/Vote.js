@@ -7,23 +7,27 @@ import './Vote.scss'
 
 const VoteCN = cn('vote')
 export const Vote = props => {
-  const {data: {emoji, selectedUserId, users, title, subtitle}} = props
+  const {data: {emoji, selectedUserId, users, title, subtitle, offset = 0}} = props
+  console.log(users);
   const userList = users.map(el => {
-    delete el.valueText;
-    el.id ===selectedUserId && (el.emoji = '👍')
-    return <div className={VoteCN('profile-container' ,{selected: el.id ===selectedUserId})}>
+     delete el.valueText
+    el.id === selectedUserId && (el.emoji = '👍')
+    return <div data-action="update" data-params={JSON.stringify({alias: 'leaders', data: {selectedUserId: el.id}})}
+                className={VoteCN('profile-container', {selected: el.id === selectedUserId})}>
       <Profile user={el}/>
     </div>
-  }).slice(0,8)
-  console.log(props);
-  console.log(props);
+  }).slice(offset, offset + 8)
   return (<div className={VoteCN('container')}>
     <Title text={title} subtitle={subtitle}/>
     <div className={VoteCN('user-container-wrapper')}>
       <div className={VoteCN('user-container')}>
         {userList}
-        <div className={VoteCN('button-up')}/>
-        <div className={VoteCN('button-down')}/>
+        <div className={VoteCN('button', {up: true, active: offset - 2 >= 0})}
+             data-action="update"
+             data-params={JSON.stringify({alias: 'vote', data: {offset: Math.max(offset - 2, 0)}})}/>
+        <div className={VoteCN('button', {down: true, active: users.length - offset >= 6})}
+             data-action="update"
+             data-params={JSON.stringify({alias: 'vote', data: {offset: Math.min(offset + 2, users.length-6)}})}/>
       </div>
     </div>
 

@@ -23,7 +23,6 @@ export const Diagram = props => {
       {i!==categories.length-1? (<div className={DiagramCN('line')}/>) : (<></>) }
     </>)
   })
-  console.log(props.data);
   return (<div className={DiagramCN('container')}>
     <Title text={title} subtitle={subtitle}/>
 

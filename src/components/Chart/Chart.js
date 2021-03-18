@@ -10,7 +10,10 @@ const ChartCN = cn('chart')
 export const Chart = props => {
   const {title, subtitle, users, values} = props.data
   let max = 0;
-  let v = values.slice(4, 13).reverse().map((el) => {
+  let v = values
+     .slice(4, 13)
+    .reverse()
+    .map((el) => {
     max = Math.max(max, el.value);
     return el
   })

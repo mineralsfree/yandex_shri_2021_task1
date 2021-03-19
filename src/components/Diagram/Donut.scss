@@ -4,7 +4,35 @@
   }
 
   &-text {
-    width: 120px;
+    width: 180px;
+    @media only screen and (orientation: landscape) {
+      width: 120px;
+    }
+
+    &_diff {
+      @media only screen and (orientation: landscape) {
+        font-size: 18px;
+        line-height: 20px;
+      }
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 22px;
+      color: #918F8A;
+    }
+
+    &_total {
+      @media only screen and (orientation: landscape) {
+        font-size: 20px;
+        line-height: 22px;
+      }
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 32px;
+      margin-bottom: 6px;
+      @media only screen and (orientation: portrait) {
+        margin-bottom: 8px;
+      }
+    }
   }
 
   &-text-container {
@@ -16,23 +44,5 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-}
-
-.differenceText {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
-  color: #918F8A;
-}
-
-.totalText {
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 22px;
-  margin-bottom: 6px;
-  @media only screen and (orientation: portrait) {
-    margin-bottom: 8px;
-
   }
 }

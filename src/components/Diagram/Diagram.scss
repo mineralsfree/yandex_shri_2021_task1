@@ -1,14 +1,17 @@
 @import "../../colors";
 
 .diagram {
-  &-valueText{
+  &-value-text{
+     color: $grey;
      margin-left: 16px;
+  }
+  &-diff-text{
+    color: $grey;
   }
   &-title{
     margin-left: 10px;
   }
   &-container{
-    margin: 24px;
   }
   &-horizontal {
     display: flex;
@@ -47,7 +50,7 @@
     display: flex;
   }
   &-info{
-    margin-top: 32px;
+    margin: 32px 24px 0 24px;
   }
   &-circle {
     transform: matrix(1, 0, 0, -1, 0, 0);

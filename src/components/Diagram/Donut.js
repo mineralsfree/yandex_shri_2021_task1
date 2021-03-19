@@ -1,19 +1,20 @@
 import React from 'react'
-import {Cell, Pie, PieChart, Label} from "recharts";
+import {Cell, Pie, PieChart} from "recharts";
 import {cn} from "@bem-react/classname";
 
 
 const DonatCN = cn('donat')
 export const Donut = props => {
-  const {height, categories, width, totalText, differenceText} = props;
   console.log(props);
+  const {height, categories, width, totalText, differenceText} = props;
   const data = categories.map(el => {
     return {value: Number(el.valueText.split(' ')[0])}
   })
+  console.log(data);
   return (<div className={DonatCN('container')}>
       <div className={DonatCN('text-container')} style={{width, height}}>
-        <div className={DonatCN('text totalText')}>{totalText}</div>
-        <div className={DonatCN('text differenceText')}>{differenceText}</div>
+        <div className={DonatCN('text', {total: true})}>{totalText}</div>
+        <div className={DonatCN('text', {diff: true})}>{differenceText}</div>
       </div>
       <PieChart isAnimationActive={false} width={width} height={height}>
         <defs>
@@ -35,9 +36,19 @@ export const Donut = props => {
           </radialGradient>
         </defs>
 
-        <Pie paddingAngle={1} startAngle={0} isAnimationActive={false} data={data} dataKey="value"
-             cx="50%" cy="50%" innerRadius={Math.floor(width / 2 * 0.7)} outerRadius={width / 2}
-             cornerRadius={6}>
+        <Pie
+          paddingAngle={1}
+          // startAngle={-2}
+          // endAngle={358}
+          isAnimationActive={false}
+          data={data}
+          dataKey="value"
+          cx="50%"
+          cy="50%"
+          innerRadius={'71.5%'}
+          outerRadius={width / 2}
+          cornerRadius={6}>
+
           {
             data.map((entry, index) => {
               return <Cell key={`cell-${index}`} fill={`url(#paint${index})`} stroke={'none'}/>

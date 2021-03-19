@@ -16,8 +16,8 @@ export const Diagram = props => {
         <div className={DiagramCN('title')}>{el.title}</div>
       </div>
       <div className={DiagramCN('value-container')}>
-        <div className={DiagramCN('differenceText')}>{el.differenceText.split(' ')[0]}</div>
-        <div className={DiagramCN('valueText')}>{el.valueText.split(' ')[0]}</div>
+        <div className={DiagramCN('diff-text')}>{el.differenceText.split(' ')[0]}</div>
+        <div className={DiagramCN('value-text')}>{el.valueText.split(' ')[0]}</div>
       </div>
     </div>
       {i!==categories.length-1? (<div className={DiagramCN('line')}/>) : (<></>) }

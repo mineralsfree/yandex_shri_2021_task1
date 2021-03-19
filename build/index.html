@@ -1,38 +1,14 @@
 <html lang="en"><head><meta charset="UTF-8"><title>Task 1 SHRI</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/><script defer="defer" src="stories.js"></script></head><body><script src="stories.js"></script><script>const body = document.querySelector('body');
-  body.innerHTML = window.renderTemplate('vote',   {
-      "title": "Самый 🔎 внимательный разработчик",
-      "subtitle": "Спринт Тополиный пух",
-      "emoji": "🔎",
-      "users": [{"id": 1, "avatar": "1.jpg", "name": "Евгений Дементьев", "valueText": "1007"}, {
-        "id": 9,
-        "avatar": "9.jpg",
-        "name": "Сергей Бережной",
-        "valueText": "993"
-      }, {"id": 10, "avatar": "10.jpg", "name": "Яна Берникова", "valueText": "946"}, {
-        "id": 7,
-        "avatar": "7.jpg",
-        "name": "Дмитрий Андриянов",
-        "valueText": "906"
-      }, {"id": 12, "avatar": "12.jpg", "name": "Алексей Ярошевич", "valueText": "889"}, {
-        "id": 2,
-        "avatar": "2.jpg",
-        "name": "Александр Шлейко",
-        "valueText": "883"
-      }, {"id": 5, "avatar": "5.jpg", "name": "Александр Николаичев", "valueText": "851"}, {
-        "id": 11,
-        "avatar": "11.jpg",
-        "name": "Юрий Фролов",
-        "valueText": "847"
-      }, {"id": 8, "avatar": "8.jpg", "name": "Александр Иванков", "valueText": "841"}, {
-        "id": 3,
-        "avatar": "3.jpg",
-        "name": "Дарья Ковалева",
-        "valueText": "839"
-      }, {"id": 4, "avatar": "4.jpg", "name": "Вадим Пацев", "valueText": "828"}, {
-        "id": 6,
-        "avatar": "6.jpg",
-        "name": "Андрей Мокроусов",
-        "valueText": "792"
-      }]
-    }
+  body.innerHTML = window.renderTemplate('diagram',    {
+    "title": "Размер коммитов",
+      "subtitle": "Спринт № 213",
+      "totalText": "182 коммита",
+      "differenceText": "+42 с прошлого спринта",
+      "categories": [
+      {"title": "> 1001 строки", "valueText": "30 коммитов", "differenceText": "+8 коммитов"},
+      {"title": "501 — 1000 строк", "valueText": "32 коммита", "differenceText": "+6 коммитов"},
+      {"title": "101 — 500 строк", "valueText": "58 коммитов", "differenceText": "+16 коммитов"},
+      {"title": "1 — 100 строк", "valueText": "62 коммита", "differenceText": "+12 коммитов"}
+    ]
+  }
   );</script></body></html>

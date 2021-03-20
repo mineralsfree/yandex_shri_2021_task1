@@ -49,7 +49,7 @@ export const Donut = props => {
                 key={`cell-${index}`}
                 fill={`url(#paint${entry.id})`}
                 fillOpacity={index===0 ? 0.8 : 0.5}
-                filter={`url(#filter${entry.id})`}
+                // filter={`url(#filter${entry.id})`}
                 stroke={'none'}/>
             })
           }

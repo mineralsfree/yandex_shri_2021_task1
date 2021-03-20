@@ -68,8 +68,9 @@
     }
 
     &_2 {
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      box-shadow:  inset -1px -1px 1px rgba(255, 255, 255, 0.5);
       background: $gray_background;
-      box-shadow: $gray_shadow;
     }
 
     &_3 {

@@ -17,16 +17,16 @@ export const Donut = props => {
     .reverse()
   // data =   [data[1], data[0], data[3], data[2]]
   return (<div className={DonatCN('container')}>
-      <div className={DonatCN('text-container')} style={{width, height}}>
+      <div className={DonatCN('text-container')}>
         <div className={DonatCN('text', {total: true})}>{totalText}</div>
         <div className={DonatCN('text', {diff: true})}>{differenceText}</div>
       </div>
-      <PieChart isAnimationActive={false} width={width} height={height}>
+      <PieChart isAnimationActive={false} width={width} height={height} className={DonatCN('svg')}>
         <defs>
-          <Yellow/>
-          <Brown/>
-          <Grey/>
-          <DarkGrey/>
+          <Yellow size={width/2}/>
+          <Brown size={width/2}/>
+          <Grey size={width/2}/>
+          <DarkGrey size={width/2}/>
         </defs>
 
         <Pie

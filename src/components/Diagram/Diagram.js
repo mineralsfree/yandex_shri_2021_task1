@@ -31,7 +31,7 @@ export const Diagram = props => {
         <Donut height={328} width={328} categories={categories} totalText={totalText} differenceText={differenceText}/>
       </div>
       <div className={DiagramCN('horizontal')}>
-        <Donut height={240} width={240} categories={categories} totalText={totalText} differenceText={differenceText}/>
+        {/*<Donut height={240} width={240} categories={categories} totalText={totalText} differenceText={differenceText}/>*/}
       </div>
       <div className={DiagramCN('info')}>{info}</div>
 

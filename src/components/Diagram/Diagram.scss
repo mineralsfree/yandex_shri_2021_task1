@@ -1,6 +1,12 @@
 @import "../../colors";
 
 .diagram {
+  @media only screen and (orientation: landscape) {
+    margin-top: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   &-value-text{
      color: $grey;
      margin-left: 17px;
@@ -28,9 +34,7 @@
     justify-content: center;
     margin-top: 32px;
     @media only screen and (orientation: landscape) {
-      width: 0;
-      height: 0;
-      visibility: hidden;
+      margin-top: 0;
     }
 
   }
@@ -50,6 +54,10 @@
     display: flex;
   }
   &-info{
+    @media screen and (orientation: landscape){
+      min-width: 304px;
+      margin: 15px 0 0 40px;
+    }
     margin: 32px 24px 0 24px;
   }
   &-circle {
@@ -70,7 +78,7 @@
     &_2 {
       transform: matrix(1, 0, 0, -1, 0, 0);
       box-shadow:  inset -1px -1px 1px rgba(255, 255, 255, 0.5);
-      background: $gray_background;
+      background: $gray_background
     }
 
     &_3 {

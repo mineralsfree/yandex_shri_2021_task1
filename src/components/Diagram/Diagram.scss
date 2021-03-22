@@ -27,9 +27,9 @@
     @media only screen and (orientation: landscape) and (min-width: 413px) {
       display: flex;
       flex-direction: column;
-
     }
     height: 100vh;
+    overflow: hidden;
   }
   &-horizontal {
     display: flex;
@@ -40,8 +40,33 @@
       visibility: hidden;
     }
   }
+  &-light{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    .theme_light &{
 
-  &-vertical {
+      visibility: visible;
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      margin-top: 32px;
+      @media only screen and (orientation: landscape) {
+        margin-top: 0;
+      }
+    }
+  }
+  &-dark{
+    .theme_light &{
+      width: 0;
+      height: 0;
+      visibility: hidden;
+      margin: 0;
+    }
+    visibility: visible;
+    width: auto;
+    height: auto;
     display: flex;
     justify-content: center;
     margin-top: 32px;

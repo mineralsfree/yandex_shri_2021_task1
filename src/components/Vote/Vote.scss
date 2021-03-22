@@ -68,7 +68,7 @@
       &-wrapper {
         display: flex;
         justify-content: center;
-        @media only screen and (min-height: 413px){
+        @media only screen and (min-height: 413px) and (orientation: landscape){
           margin: auto 0 ;
         }
       }

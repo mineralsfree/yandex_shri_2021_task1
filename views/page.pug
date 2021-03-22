@@ -1,11 +1,12 @@
 html
     head
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
         style
             include ../build/stories.css
         title= 'Stories'
     body
         script(src='stories.js')
         script.
-          const body = document.querySelector('body');
+           const body = document.querySelector('body');
           body.className=!{JSON.stringify(theme)}
           body.innerHTML = window.renderTemplate(!{JSON.stringify(alias)}, !{JSON.stringify(data)})

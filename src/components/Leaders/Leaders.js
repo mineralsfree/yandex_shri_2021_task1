@@ -33,7 +33,6 @@ export const Leaders = props => {
   users.forEach((el, i) => {
     el.position = el.position ? el.position : i + 1
   })
-
   users = sortProfiles(users);
   return (<div className={LeadersCN('main-container')}>
         <Title text={data.title} subtitle={data.subtitle}/>

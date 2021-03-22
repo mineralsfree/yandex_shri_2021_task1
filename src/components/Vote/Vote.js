@@ -8,7 +8,6 @@ import './Vote.scss'
 const VoteCN = cn('vote')
 export const Vote = props => {
   const {data: {emoji, selectedUserId, users, title, subtitle, offset = 0}} = props
-  console.log(users);
   const userList = users.map(el => {
      delete el.valueText
     el.id === selectedUserId && (el.emoji = '👍')

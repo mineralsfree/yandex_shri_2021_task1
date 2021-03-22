@@ -1,33 +1,51 @@
 @import "src/_colors";
-.title{
-    &-container{
-        margin-top: 20px;
-        //margin-bottom: 48px;
-        @media only screen and (orientation: portrait) {
-            //margin-bottom: 117px;
-            text-align: start;
-            margin-left: 24px;
-            @media only screen and (max-width: 415px) {
-                max-width: 300px;
-            }
-        }
+
+.title {
+  &-container {
+    margin-top: 20px;
+    @media only screen and (orientation: portrait) {
+      text-align: start;
+      margin-left: 24px;
+      @media only screen and (max-width: 415px) {
+        max-width: 300px;
+      }
     }
-    &-title{
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 32px;
+    @media only screen and (max-height: 321px), screen and  (max-width: 343px) {
+      margin-top: 10px;
     }
-    &-subtitle{
-        font-weight: 500;
-        margin-top: 8px;
-        line-height: 18px;
-        font-size: 16px;
-        color: $grey
+  }
+
+  &-title {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 32px;
+    @media only screen and (min-width: 767px) {
+      font-size: 38px;
+      line-height: 40px;
     }
+      @media only screen and (max-width: 343px), screen and (max-height: 321px){
+      font-size: 24px;
+      line-height: 26px;
+    }
+  }
+
+  &-subtitle {
+    font-weight: 500;
+    margin-top: 8px;
+    line-height: 18px;
+    font-size: 16px;
+    @media only screen and (min-width: 767px) {
+      font-size: 20px;
+      line-height: 22px;
+    }
+    color: $grey
+  }
 }
-.theme_light .title-subtitle{
-    color: $light_gray
+
+.theme_light .title-subtitle {
+  color: $light_gray
 }
-svg:hover{
-    fill: red;
+
+svg:hover {
+  fill: red;
 }

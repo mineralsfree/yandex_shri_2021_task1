@@ -1,0 +1,11 @@
+html
+    head
+        style
+            include ../build/stories.css
+        title= 'Stories'
+    body
+        script(src='stories.js')
+        script.
+          const body = document.querySelector('body');
+          body.className=!{JSON.stringify(theme)}
+          body.innerHTML = window.renderTemplate(!{JSON.stringify(alias)}, !{JSON.stringify(data)})

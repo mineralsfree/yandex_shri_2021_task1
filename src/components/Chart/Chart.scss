@@ -6,33 +6,63 @@
     display: flex;
     height: 167px;
     flex-direction: row-reverse;
+    @media only screen and (max-height: 321px) {
+      margin-top: 0;
+    }
     @media only screen and (orientation: portrait) {
+      @media only screen and (max-height: 569px){
+        height: 350px;
+        margin: 0;
+      }
       height: 386px;
       overflow-x: hidden;
       margin-top: 43px;
     }
     justify-content: space-between;
     align-items: flex-end;
+    @media only screen and (min-height: 767px) and (min-width: 767px){
+      height: 500px;
+      width: 700px;
+    }
   }
 
   &-container {
   }
 
   &-chart-list {
+    @media only screen and (max-height: 669px) {
+      & > div:nth-child(n+3){
+        display: none;
+      }
+    }
+    &-item{
+      display: flex;
+      align-items: center;
+      @media only screen and (orientation: portrait) {
+      flex-direction: column;
+        align-items: flex-start;
+
+      }
+      }
     @media only screen and (orientation: portrait) {
       flex-direction: column;
       margin: 23px 24px 0 24px;
-
     }
     margin-top: 53px;
     display: flex;
     justify-content: center;
     min-width: 40px;
+    @media only screen and (max-height: 321px){
+      margin-top: 40px;
+    }
   }
 
   &-chart-section {
     display: flex;
+    @media only screen and (min-height: 767px) and (orientation: landscape){
+      align-items: center;
 
+    }
     margin: 0 58px;
     @media only screen and (orientation: portrait) {
       margin: 0;

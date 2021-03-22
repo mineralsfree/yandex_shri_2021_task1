@@ -1,15 +1,25 @@
+$big: 328px;
 .donat {
   &-svg {
-    @media only screen and (orientation: landscape) {
+    @media only screen and (orientation: landscape) and (max-width: 766px),only screen and (max-width: 321px) {
       width: 240px !important;
       height: 240px !important;
     }
+    @media only screen and (min-width: 767px) {
+      width: $big;
+      height: $big;
+    }
     svg {
-      @media only screen and (orientation: landscape) {
+      @media only screen and (orientation: landscape),only screen and (max-width: 321px) {
         width: 240px;
         height: 240px;
       }
+      @media only screen and (min-width: 767px) {
+        width: $big;
+        height: $big;
+      }
     }
+
   }
 
   &-container {
@@ -18,12 +28,12 @@
 
   &-text {
     width: 180px;
-    @media only screen and (orientation: landscape) {
+    @media only screen and (orientation: landscape) and (max-width: 766px),only screen and (max-width: 321px) {
       width: 120px;
     }
 
     &_diff {
-      @media only screen and (orientation: landscape) {
+      @media only screen and (orientation: landscape) and (max-width: 766px),only screen and (max-width: 321px) {
         font-size: 16px;
         line-height: 18px;
         font-weight: 500;
@@ -35,7 +45,7 @@
     }
 
     &_total {
-      @media only screen and (orientation: landscape) {
+      @media only screen and (orientation: landscape),only screen and (max-width: 321px) {
         font-size: 20px;
         line-height: 22px;
       }
@@ -52,9 +62,14 @@
   &-text-container {
     width: 328px;
     height: 328px;
-    @media only screen and (orientation: landscape) {
+
+    @media only screen and (orientation: landscape),only screen and (max-width: 321px) {
       width: 240px;
       height: 240px;
+    }
+    @media only screen and (min-width: 767px) {
+      width: 328px;
+      height: 328px;
     }
     position: absolute;
     top: 0;

@@ -1,5 +1,7 @@
 import React from 'react'
-import {Cell, Pie, PieChart} from "recharts";
+import {PieChart} from "recharts/es6/chart/PieChart";
+import {Cell} from "recharts/es6/component/Cell";
+import {Pie} from 'recharts/es6/polar/Pie';
 import {cn} from "@bem-react/classname";
 import {Brown, DarkGrey, Grey, Yellow} from "./SVGEffects/Dark";
 
@@ -10,12 +12,10 @@ export const Donut = props => {
   const sum = categories.reduce((a, c) => Number(c.valueText.split(' ')[0]) + a, 0);
   let data = categories.map((el, i) => {
     let value = Number(el.valueText.split(' ')[0])
-    console.log(value / sum * 360);
-    value = true ? (value / sum * 360) - 1 : value;
+    value = (value / sum * 360) - 1 ;
     return {value, id: i}
   })
     .reverse()
-  // data =   [data[1], data[0], data[3], data[2]]
   return (<div className={DonatCN('container')}>
       <div className={DonatCN('text-container')}>
         <div className={DonatCN('text', {total: true})}>{totalText}</div>
@@ -43,7 +43,6 @@ export const Donut = props => {
 
           {
             data.map((entry, index) => {
-              console.log(entry, index);
               return <Cell
                 key={`cell-${index}`}
                 fill={`url(#paint${entry.id})`}

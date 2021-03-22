@@ -5,7 +5,6 @@ export const getRange = (data) =>{
   const max = Math.max.apply(null, tempArr);
   const resolveObject =  {0: 'min'};
   const rangeLength =Math.floor(max / 3);
-  console.log(max);
   for (let i = 1; i <= max; i++) {
     const val = i / rangeLength
     if (val <= 1) {
@@ -16,6 +15,5 @@ export const getRange = (data) =>{
       resolveObject[i] = 'extra';
     }
   }
-  console.log(      resolveObject);
   return [rangeLength, max, resolveObject];
 }

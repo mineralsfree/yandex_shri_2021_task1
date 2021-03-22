@@ -1,8 +1,11 @@
 @import '../../_colors';
-
+$big_margin: 60px;
 .leaderboard {
   &-profile {
     margin-bottom: 16px;
+    @media only screen and (max-height: 343px) {
+      margin-bottom: 8px
+    }
   }
 
   &-main-container {
@@ -32,6 +35,9 @@
 
     &_2 {
       margin-top: 20px;
+      @media only screen and (min-height: 767px){
+        margin-top: $big_margin;
+      }
       @media only screen and (orientation: portrait) {
         margin-top: 50px;
       }
@@ -39,16 +45,25 @@
 
     &_3 {
       margin-top: 20px;
+      @media only screen and (min-height: 767px){
+        margin-top: $big_margin;
+      }
       @media only screen and (orientation: portrait) {
         margin-top: 100px;
       }
     }
 
     &_4 {
+      @media only screen and (min-height: 767px){
+        margin-top: $big_margin * 2;
+      }
       margin-top: 40px;
     }
 
     &_5 {
+      @media only screen and (min-height: 767px){
+        margin-top: 120px;
+      }
       margin-top: 40px;
     }
 
@@ -60,13 +75,8 @@
 
   &-container {
     justify-content: center;
-    @media only screen and (orientation: portrait) {
-      .leaderboard-item_container:first-child {
-        display: none;
-      }
-      .leaderboard-item_container:nth-last-child(2) {
-        display: none;
-      }
+    @media only screen and (max-height: 343px) {
+      height: 228px;
     }
     display: flex;
     align-items: stretch;
@@ -76,10 +86,23 @@
     right: 50%;
     left: 50%;
     height: 250px;
-    @media only screen and (orientation: portrait) {
-      height: 467px;
 
+    @media only screen and (orientation: portrait) {
+      .leaderboard-item_container:first-child {
+        display: none;
+      }
+      .leaderboard-item_container:nth-last-child(2) {
+        display: none;
+      }
+      height: 467px;
+      @media only screen and (max-height: 580px) {
+        height: 400px;
+      }
     }
+    @media only screen and (min-height: 767px){
+      height: 60%;
+    }
+
   }
 
   &-voted {

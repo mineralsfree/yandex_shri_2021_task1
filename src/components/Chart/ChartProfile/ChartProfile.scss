@@ -2,6 +2,9 @@
 
 .chart-profile {
   &-container {
+    @media only screen and (min-height: 767px){
+      width: unset;
+    }
     width: 220px;
     display: flex;
     align-items: center;
@@ -12,6 +15,11 @@
   }
 
   &-image {
+    @media only screen and (min-height: 767px){
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+    }
     margin-right: 1px;
     filter: grayscale(100%);
     width: 40px;

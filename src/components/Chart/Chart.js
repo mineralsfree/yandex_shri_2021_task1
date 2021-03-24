@@ -23,13 +23,13 @@ export const Chart = props => {
   })
   let u = users
     .map((el, i, arr) => {
-      return (<div className={ ChartCN('chart-list-item')}>
+      return (<div key={el.id} className={ ChartCN('chart-list-item')}>
         {i === 0 ? '' : <div className={ChartCN('line')}/>}
         <ChartProfile user={el}/>
       </div>)
     });
   u = [...u]
-  const bars = v.map((el, i) => <><ChartBar {...el}/></>)
+  const bars = v.map((el, i) => <div key={i}><ChartBar {...el}/></div>)
   return (<div className={ChartCN('container')}>
     <Title text={title} subtitle={subtitle}/>
     <div className={ChartCN('chart-section')}>

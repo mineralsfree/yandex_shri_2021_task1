@@ -38,7 +38,7 @@ export const Leaders = props => {
         <Title text={data.title} subtitle={data.subtitle}/>
       <div className={LeadersCN('container',)}>
         {users.map((el, i) => {
-          return (<div className={LeadersCN('item_container', {[el.position > 5 ? 5 : el.position]: true})}>
+          return (<div key={el.id} className={LeadersCN('item_container', {[el.position > 5 ? 5 : el.position]: true})}>
               <div className={LeadersCN('profile')}>
                 <Profile user={el}/>
               </div>

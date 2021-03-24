@@ -11,7 +11,7 @@ export const Vote = props => {
   const userList = users.map(el => {
      delete el.valueText
     el.id === selectedUserId && (el.emoji = '👍')
-    return <div data-action="update" data-params={JSON.stringify({alias: 'leaders', data: {selectedUserId: el.id}})}
+    return <div key={el.id} data-action="update" data-params={JSON.stringify({alias: 'leaders', data: {selectedUserId: el.id}})}
                 className={VoteCN('profile-container', {selected: el.id === selectedUserId})}>
       <Profile user={el}/>
     </div>

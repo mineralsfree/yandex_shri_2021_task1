@@ -11,7 +11,7 @@ const plugins = [
 ]
 module.exports = merge(common, {
   plugins,
-  devtool: 'source-map',
+  devtool: false,
   mode: 'production',
   module: {
     rules: [

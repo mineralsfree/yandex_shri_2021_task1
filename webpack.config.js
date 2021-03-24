@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const importer = require("node-sass-importer");
 
 const path = require("path");
 
@@ -42,7 +41,9 @@ module.exports = {
   entry: ['@babel/polyfill', path.resolve(__dirname, "src", "stories.js")],
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "src", "index.html")
+      favicon: "./src/favicon.gif",
+      template: path.resolve(__dirname, "src", "index.html"),
+      filename: "index.html"
     })
   ],
 }

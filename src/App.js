@@ -5,7 +5,7 @@ import {Vote} from "./components/Vote/Vote";
 import {Diagram} from "./components/Diagram/Diagram";
 import {Global} from "recharts";
 import {Activity} from "./components/Activity/Activity";
-import {data} from './data.js'
+
 const storiesMap = {
   leaders: <Leaders/>,
   chart: <Chart/>,
@@ -14,9 +14,12 @@ const storiesMap = {
   activity: <Activity/>
 }
 
-export const App = ({alias, data} )=>{
+export const App = ({alias, data}) => {
   Global.isSsr = true;
-  return (React.cloneElement(storiesMap[alias], {data} ))
-  {/*<div data-action="go-prev"></div>*/}
-  {/*<div data-action="go-next"></div>*/}
+  return (<>
+      {/*<div data-action="go-prev"/>*/}
+      {/*<div data-action="go-next"/>*/}
+      { React.cloneElement(storiesMap[alias], {data})}
+    </>
+  )
 }

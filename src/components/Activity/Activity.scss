@@ -12,13 +12,13 @@
     @media screen and (orientation: landscape) {
       margin-top: 58px;
     }
-    @media screen and (min-width: 413px) and (orientation: portrait),  screen and (min-width: 669px) {
+    @media screen and (min-width: 413px) and (orientation: portrait), screen and (min-width: 669px) {
       margin: auto 0;
     }
     @media screen and (max-width: 321px) {
       margin-top: 25px;
     }
-      margin-top: 50px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,6 +26,16 @@
 
   &-scale-bar {
     &-item {
+      display: block;
+      @media screen and (orientation: landscape){
+        display: none;
+      }
+      &_landscape{
+        display: none;
+        @media screen and (orientation: landscape){
+          display: block;
+        }
+      }
       margin-left: 8px;
     }
 
@@ -37,11 +47,11 @@
     @media screen and (orientation: landscape) {
       margin-top: 53px;
     }
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 767px) and (min-height: 415px) {
       margin-top: 100px;
     }
 
-      &-text {
+    &-text {
       margin-top: 8px;
       font-weight: 500;
       font-size: 16px;
@@ -49,11 +59,13 @@
       color: $grey;
       text-align: left;
       display: block;
+
       &_vertical {
         @media screen and (orientation: landscape) {
           display: none;
         }
       }
+
       &_horizontal {
         @media screen and (orientation: portrait) {
           display: none;
@@ -77,7 +89,7 @@
       @media screen  and (max-width: 321px) {
         width: 45px;
       }
-      @media screen and (min-width: 767px) {
+      @media screen and (min-width: 767px) and (min-height: 415px) {
         width: 90px;
         height: 18px;
       }

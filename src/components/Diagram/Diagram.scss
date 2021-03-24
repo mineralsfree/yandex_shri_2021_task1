@@ -2,10 +2,10 @@
 
 .diagram {
   @media only screen and (orientation: landscape) {
-    @media screen and (max-height: 321px){
+    @media screen and (max-height: 321px) {
       margin-top: 10px;
     }
-      margin-top: 29px;
+    margin-top: 29px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,17 +13,21 @@
   @media only screen and (orientation: landscape) and (min-height: 413px) {
     margin: auto 0;
   }
-  &-value-text{
-     color: $grey;
-     margin-left: 17px;
+
+  &-value-text {
+    color: $grey;
+    margin-left: 17px;
   }
-  &-diff-text{
+
+  &-diff-text {
     color: $grey;
   }
-  &-title{
+
+  &-title {
     margin-left: 10px;
   }
-  &-container{
+
+  &-container {
     @media only screen and (orientation: landscape) and (min-width: 413px) {
       display: flex;
       flex-direction: column;
@@ -31,6 +35,7 @@
     height: 100vh;
     overflow: hidden;
   }
+
   &-horizontal {
     display: flex;
     justify-content: center;
@@ -40,11 +45,13 @@
       visibility: hidden;
     }
   }
-  &-light{
+
+  &-light {
     width: 0;
     height: 0;
     visibility: hidden;
-    .theme_light &{
+
+    .theme_light & {
 
       visibility: visible;
       width: auto;
@@ -57,13 +64,15 @@
       }
     }
   }
-  &-dark{
-    .theme_light &{
+
+  &-dark {
+    .theme_light & {
       width: 0;
       height: 0;
       visibility: hidden;
       margin: 0;
     }
+
     visibility: visible;
     width: auto;
     height: auto;
@@ -75,41 +84,48 @@
     }
 
   }
-  &-line{
+
+  &-line {
     width: 100%;
     background: #918F8A;
     opacity: 0.3;
     margin-bottom: 16px;
     height: 2px;
   }
-  &-table{
+
+  &-table {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
   }
-  &-value-container{
+
+  &-value-container {
     display: flex;
   }
-  &-info{
-    @media screen and (orientation: landscape){
+
+  &-info {
+    @media screen and (orientation: landscape) {
       min-width: 304px;
       margin: 15px 0 0 40px;
-      @media screen and (max-height: 321px){
+      @media screen and (max-height: 321px) {
         min-width: 255px;
         margin: 15px 0 0 10px;
       }
-      @media screen and (min-width: 767px){
+      @media screen and (min-width: 767px) and (min-height: 400px) {
         min-width: 450px;
         margin: 15px 0 0 60px;
       }
     }
     margin: 32px 24px 0 24px;
   }
+
   &-circle {
     margin-top: 1px;
-    &-container{
+
+    &-container {
       display: flex;
     }
+
     &_0 {
       box-shadow: $orange_shadow;
       background: $orange_background;
@@ -122,7 +138,7 @@
 
     &_2 {
       transform: matrix(1, 0, 0, -1, 0, 0);
-      box-shadow:  inset -1px -1px 1px rgba(255, 255, 255, 0.5);
+      box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.5);
       background: $gray_background
     }
 

@@ -5,19 +5,16 @@ import './Table.scss';
 
 export const TableCN = cn('table')
 export const Table = props => {
-  const {data} = props;
-  let dataArr = Object.values(data);
-  dataArr = dataArr[0].map((_, colIndex) => dataArr.map(row => row[colIndex]));
-  const [__, _, resolveObject] = getRange(data);
-  return (<div className={TableCN('table')}>
-    {dataArr.map((row, index) => {
+  const {data, landscape, resolveObject} = props;
+  return (<div className={TableCN('table', {landscape: landscape})}>
+    {data.map((row, index) => {
       return (<>
         {
           row.map((item, i) => {
             return (
-              <div className={TableCN('table-item', {odd: !!(index % 2), size: resolveObject[item]})}
+              <div key={i} className={TableCN('table-item', {odd: !!(index % 2), size: resolveObject[item], landscape: landscape})}
                    style={{zIndex: index}}>
-                <img className={TableCN('table-image', {[resolveObject[item]]: true})}/>
+                <img className={TableCN('table-image', {[resolveObject[item]]: true, landscape: landscape})}/>
               </div>
             )
           })

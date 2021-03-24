@@ -10,7 +10,7 @@ const DiagramCN = cn('diagram')
 export const Diagram = props => {
   const {title, subtitle, categories, totalText, differenceText} = props.data;
   const info = categories.map((el, i) => {
-    return (<><div className={DiagramCN('table')}>
+    return (<div key={i}><div className={DiagramCN('table')}>
       <div className={DiagramCN('circle-container')}>
         <div className={DiagramCN('circle', {[i]: true})}/>
         <div className={DiagramCN('title')}>{el.title}</div>
@@ -21,11 +21,10 @@ export const Diagram = props => {
       </div>
     </div>
       {i!==categories.length-1? (<div className={DiagramCN('line')}/>) : (<></>) }
-    </>)
+    </div>)
   })
   return (<div className={DiagramCN('container')}>
     <Title text={title} subtitle={subtitle}/>
-
     <div className={DiagramCN('')}>
       <div className={DiagramCN('dark')}>
         <Donut height={328} width={328} categories={categories} totalText={totalText} differenceText={differenceText} light={false}/>
@@ -34,8 +33,6 @@ export const Diagram = props => {
         <Donut height={328} width={328} categories={categories} totalText={totalText} differenceText={differenceText} light/>
       </div>
       <div className={DiagramCN('info')}>{info}</div>
-
     </div>
-
   </div>)
 }

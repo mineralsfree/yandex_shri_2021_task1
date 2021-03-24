@@ -37,7 +37,7 @@ $lps: 19;
         grid-template-columns: repeat(var(--columns), $ls*4 + px);
         grid-template-rows: repeat(var(--rows), 13+ px);
       }
-        @media screen and (min-width: 767px){
+        @media screen and (min-width: 767px) and (min-height: 415px){
           grid-template-columns: repeat(var(--columns), $lps*4 + px);
           grid-template-rows: repeat(var(--rows), 30+ px);
         }
@@ -46,7 +46,7 @@ $lps: 19;
     &-image {
       &_landscape {
         width: $ls*4 + px;
-        @media screen and (min-width: 767px){
+        @media screen and (min-width: 767px)and  (min-height: 415px){
           width: auto;
         }
       }
@@ -54,14 +54,14 @@ $lps: 19;
       @media screen and (max-width: 321px) {
         width: 9*4 + px;
       }
-      @media screen and (min-width: 767px) {
+      @media screen and (min-width: 767px) and (min-height: 415px) {
         width: $lps*4 + px;
 
       }
         &_min {
         @media screen and (orientation: landscape) {
           height: 32px;
-          @media screen and (min-width: 767px){
+          @media screen and (min-width: 767px) and (min-height: 415px){
             height: $lps*4;
           }
         }
@@ -114,7 +114,7 @@ $lps: 19;
           @media screen and (orientation: landscape) {
             margin-top: -8px;
           }
-          @media screen and (min-width: 767px) {
+          @media screen and (min-width: 767px)  and (min-height: 415px){
             margin-top: -15px;
           }
             margin-top: -9px;
@@ -127,7 +127,7 @@ $lps: 19;
           @media screen and (max-width: 321px) {
             margin-top: -29px;
           }
-          @media screen and (min-width: 767px){
+          @media screen and (min-width: 767px) and (min-height: 415px){
             margin-top: -50px;
           }
         }
@@ -139,7 +139,7 @@ $lps: 19;
           @media screen and (max-width: 321px) {
             margin-top: -40px;
           }
-          @media screen and (min-width: 767px){
+          @media screen and (min-width: 767px) and (min-height: 415px){
           margin-top: -85px;
           }
           }
@@ -154,7 +154,7 @@ $lps: 19;
         @media screen and (orientation: landscape) {
           margin-left: $ls*2 + px;
         }
-        @media screen and (min-width: 767px){
+        @media screen and (min-width: 767px) and (min-height: 415px){
           margin-left: $lps*2 + px;
         }
 

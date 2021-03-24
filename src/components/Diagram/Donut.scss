@@ -5,7 +5,7 @@ $big: 328px;
   }
 
   &-svg {
-    @media only screen and (orientation: landscape) and (max-width: 766px), only screen and (max-width: 321px) {
+    @media only screen and (orientation: landscape) and (max-height: 415px), only screen and (max-width: 321px) {
       width: 240px !important;
       height: 240px !important;
     }
@@ -19,7 +19,7 @@ $big: 328px;
         width: 240px;
         height: 240px;
       }
-      @media only screen and (min-width: 767px) {
+      @media only screen and (min-width: 767px) and (min-height: 415px) {
         width: $big;
         height: $big;
       }
@@ -42,6 +42,10 @@ $big: 328px;
         font-size: 16px;
         line-height: 18px;
         font-weight: 500;
+      }
+      @media only screen and (orientation: landscape), only screen and (max-width: 321px){
+        font-size: 16px;
+        line-height: 18px;
       }
       font-weight: 700;
       font-size: 20px;
@@ -72,7 +76,7 @@ $big: 328px;
       width: 240px;
       height: 240px;
     }
-    @media only screen and (min-width: 767px) {
+    @media only screen and (min-width: 767px) and (min-height: 415px) {
       width: 328px;
       height: 328px;
     }

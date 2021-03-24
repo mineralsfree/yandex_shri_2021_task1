@@ -7,10 +7,11 @@ const PORT = 8080;
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.static('build'));
+app.use(express.static('build', {index: false}));
 
 app.get('/', (req, res) => {
-  const {slide, theme} = req.query;
+  let {slide, theme} = req.query;
+  if (slide===undefined) slide=1;
   let enabled_theme =theme === 'light' ?  'theme_light' : 'theme_dark';
   const index = Number(slide);
   if (isNaN(index) ||  index<1 || index >11 ){

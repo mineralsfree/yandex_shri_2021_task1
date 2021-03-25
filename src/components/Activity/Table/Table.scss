@@ -62,7 +62,7 @@ $lps: 19;
         @media screen and (orientation: landscape) {
           height: 32px;
           @media screen and (min-width: 767px) and (min-height: 415px){
-            height: $lps*4;
+            height: $lps*4 + px;
           }
         }
         content: url("../../../assets/images/4x/min-dark.png");

@@ -29,7 +29,7 @@ export const Chart = props => {
       </div>)
     });
   u = [...u]
-  const bars = v.map((el, i) => <div key={i}><ChartBar {...el}/></div>)
+  const bars = v.map((el, i) => <ChartBar {...el}/>)
   return (<div className={ChartCN('container')}>
     <Title text={title} subtitle={subtitle}/>
     <div className={ChartCN('chart-section')}>

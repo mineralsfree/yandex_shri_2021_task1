@@ -4,6 +4,10 @@
     align-items: center;
   }
   &-vertical{
+    @media screen and (min-width: 767px) {
+      width: 6px;
+      height: 18px;
+    }
     width: 4px;
     height: 12px;
     background: radial-gradient(150% 252.96% at 150% 50%, rgba(64, 59, 54, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%);
@@ -23,6 +27,7 @@
     }
     @media screen and (min-width: 767px) {
       width: 82px;
+      height: 6px;
     }
       width: 51px;
     height: 4px;

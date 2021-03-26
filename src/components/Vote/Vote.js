@@ -8,6 +8,8 @@ import './Vote.scss'
 const VoteCN = cn('vote')
 export const Vote = props => {
   const {data: {emoji, selectedUserId, users, title, subtitle, offset = 0}} = props
+  console.log(users.length);
+
   const userList = users.map(el => {
      delete el.valueText
     el.id === selectedUserId && (el.emoji = '👍')
@@ -24,7 +26,7 @@ export const Vote = props => {
         <div className={VoteCN('button', {up: true, active: offset - 2 >= 0})}
              data-action="update"
              data-params={JSON.stringify({alias: 'vote', data: {offset: Math.max(offset - 2, 0)}})}/>
-        <div className={VoteCN('button', {down: true, active: users.length - offset >= 6})}
+        <div className={VoteCN('button', {down: true, active: users.length - offset > 6})}
              data-action="update"
              data-params={JSON.stringify({alias: 'vote', data: {offset: Math.min(offset + 2, users.length-6)}})}/>
       </div>

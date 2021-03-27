@@ -127,22 +127,38 @@
     }
 
     &_0 {
+      .theme_light &{
+        box-shadow: $light_orange_shadow;
+        background: $light_orange_background
+      }
       box-shadow: $orange_shadow;
       background: $orange_background;
     }
 
     &_1 {
+      .theme_light &{
+        box-shadow: $light_yellow_shadow;
+        background: $light_yellow_background
+      }
       box-shadow: $yellow_shadow;
       background: $yellow_background;
     }
 
     &_2 {
+      .theme_light &{
+        box-shadow: $light_gray_shadow;
+        background: $light_gray_background
+      }
       transform: matrix(1, 0, 0, -1, 0, 0);
       box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.5);
       background: $gray_background
     }
 
     &_3 {
+      .theme_light &{
+        box-shadow: $light_dark_gray_shadow;
+        background: $light_dark_gray_background
+      }
       box-shadow: $dark_gray_shadow;
       background: $dark_gray_background;
     }
